@@ -5,30 +5,31 @@
 
 
 
-var Letter = function(correctLetter,guessedLetter, guessed) {
+var Letter = function(correctLetter,guessedLetter) {
     // this.cast will hold all of our CastMember objects
     this.correctLetter = correctLetter;
     this.guessed = false;
     this.placeHolder = "_";
 
-    this.checkGuess = function(guess) {
+    this.checkGuess = function(guessedLetter) {
         if(guessedLetter == correctLetter){
-            this.guessedYet = true;
+            this.guessed = true;
         }
+        this.toString();
     };
 
-    this.checkGuess = function(guess) {
+    this.toString = function(guess) {
         if(guessed){
-            return correctLetter;
+            return this.correctLetter;
         } else {
-            return placeholder;
+            return this.placeholder;
         }
     };
     
 
   };
   
-  // Exporting the Movie constructor which we will use in main.js
+  
   module.exports = Letter;
 
 

@@ -1,3 +1,31 @@
+var Letter = require("./letter.js");
+
+
+
+var Word = function(wordIn){
+    
+    
+    
+    //this.makeLetterArray = function(wordIn){
+    this.arrWordIn = wordIn.split("");
+    console.log(arrWordIn);
+    this.arrLetters = [];
+
+    for(var i = 0; i < arrWordIn.length; i++){
+        arrLetters.push(new Letter(arrWordIn[i]));
+    }
+
+
+    console.log(arrLetters[0]);
+    
+};
+
+Word("goldfish");
+
+
+
+module.exports = Word;
+
 // * **Word.js**: Contains a constructor, Word that depends on the Letter constructor. This is used to create an object representing the current word the user is attempting to guess. That means the constructor should define:
 
 //   * An array of `new` Letter objects representing the letters of the underlying word

@@ -1,3 +1,24 @@
+var Word = require("./word.js");
+
+var arrWords = [
+    "rhinoceros",
+    "elephant",
+    "imagine",
+    "astronomy",
+    "elegant",
+    "colorful",
+    "xylophone",
+    "generosity",
+    "challenging"
+];
+
+var randomWord = arrWords[Math.floor(Math.random() * arrWords.length)];
+
+console.log("random word: " + randomWord);
+
+var showNewWord = new Word(randomWord);
+console.log(Word);
+
 
 // The completed game should meet the following criteria:
 
@@ -14,4 +35,3 @@
 
 // 4. `Word.js` *should only* require `Letter.js`
 
-5.
